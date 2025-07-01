@@ -1,1 +1,2 @@
 https://github.com/KittyKatt/screenFetch/blob/master/screenfetch-dev
+https://github.com/dylanaraps/neofetch/blob/master/neofetch
