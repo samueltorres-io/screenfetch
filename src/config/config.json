@@ -1,0 +1,24 @@
+{
+  "status": {
+    "autoRun": true
+  },
+  "display": {
+    "cpu": true,
+    "ram": true,
+    "disk": true
+  },
+  "animation": {
+    "donut": {
+      "status": true,
+      "speed": 50
+    },
+    "blackHole": {
+      "status": false,
+      "speed": 60
+    }
+  },
+  "theme": {
+    "foreground": "purple",
+    "background": "black"
+  }
+}
