@@ -101,7 +101,7 @@ DonuParams loadDonutParams(int screen_width) {
 }
 
 // Donut math
-string donutRenderFrame(float a, float b, const DonutParams& p) {
+std::string donutRenderFrame(float a, float b, const DonutParams& p, int width, int height) {
     
     /* https://www.a1k0n.net/2011/07/20/donut-math.html */
 
@@ -109,14 +109,11 @@ string donutRenderFrame(float a, float b, const DonutParams& p) {
     float cosA = cos(a), sinA = sin(a);
     float cosb = cos(b), sinB = sin(b);
 
-    const int width = 80;
-    const int height = 24;
+    /* Buffers for vectors and complete dinamic 2D alocation */
+    // index = x + y * width
+    std::vector<char> output(width * height, ' ');
+    std::vector<float> zbuffer(width * height, 0.0f);
 
-    char output[screen_width, screen_height] = ' ';
-    float zbuffer[screen_width, screen_height] = 0;
-
-    /* Theta goes around the cross-sectional circle of a torus */
-    for (float theta=0; theta < 2*M_PI)
-
+    
 
 };
