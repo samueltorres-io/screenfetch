@@ -8,9 +8,15 @@
 #include <fstream>
 #include <string>
 #include <cmath>
+#include <vector>
+#include <algorithm>
 #include <filesystem>
 #include <INIReader.h>
 #include "json.hpp"
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 using json = nlohmann::json;
 
@@ -99,10 +105,18 @@ string donutRenderFrame(float a, float b, const DonutParams& p) {
     
     /* https://www.a1k0n.net/2011/07/20/donut-math.html */
 
+    /* Precompute sines and cosines of A and B */
+    float cosA = cos(a), sinA = sin(a);
+    float cosb = cos(b), sinB = sin(b);
+
     const int width = 80;
     const int height = 24;
 
-    std::string output(width * height, ' ');
+    char output[screen_width, screen_height] = ' ';
+    float zbuffer[screen_width, screen_height] = 0;
+
+    /* Theta goes around the cross-sectional circle of a torus */
+    for (float theta=0; theta < 2*M_PI)
 
 
 };
